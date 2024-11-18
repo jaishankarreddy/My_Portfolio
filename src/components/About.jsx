@@ -12,7 +12,7 @@ const About = () => {
           <div className=" grid lg:grid-cols-2 gap-8 items-center">
             <div  ref={(el) => el && divs.current.push(el)}>
               <img
-                src="/images/about_me.png"
+                src={"images/about_me.png"}
                 alt="3D Avatar"
                 className="mx-auto w-full max-w-xs my-30"
               />
