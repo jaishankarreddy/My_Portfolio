@@ -124,7 +124,7 @@ const Hero = () => {
               <img
                 src={"images/myImg.jpg"}
                 alt="Profile"
-                className="object-cover w-full h-full "
+                className="object-cover w-full h-full z-20 "
               />
             </motion.div>
         
