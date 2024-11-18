@@ -1,10 +1,14 @@
 {
+  "homepage": "https://jaishankarreddy.github.io/My_Portfolio",
   "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
