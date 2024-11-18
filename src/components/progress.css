@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .skilll {
+    position: relative;
+    width: 70px;  /* Reduced width to 30px */
+    height: 0px;
+    bottom: 20%;
+    left: 70%; 
+   
+  }
+  
+  .outer {
+    height: 40px; /* Reduced height */
+    width: 40px;  /* Reduced width */
+    padding: 3px; /* Reduced padding */
+    box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.15),
+      -1px -1px 3px -1px rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .inner {
+    height: 25px;  /* Reduced inner circle size */
+    width: 25px;   /* Reduced inner circle size */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    /* background: #ffffff00;
+    box-shadow: inset 1px 1px 2px -1px rgb(0, 0, 0),
+      inset -1px -1px 2px -1px rgb(0, 0, 0); */
+  }
+  
+  .number {
+    font-size: 0.7rem; /* Reduced font size */
+    font-weight: 700;
+    color: #000000;
+  }
+  
+  .progress_svg {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+  }
+  
+  circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width:3px; 
+    transition: stroke-dashoffset 0.3s;
+  }
+  

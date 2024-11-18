@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: neu1;
+  src: url(assets/fonts/NeueHaasDisplayLight.woff2);
+}
+
+@font-face {
+  font-family: neu2;
+  font-weight: 200;
+  src: url(assets/fonts/NeueHaasDisplayMediu.woff2);
+}
+
+/* body{
+  background: #000;
+} */
+
+.scroll-up {
+  @apply translate-y-20 opacity-0;
+}
+.name_size {
+  font-size: 18px;
+}
+
+section {
+  width: 1300px;
+  max-width: 100%;
+  margin: auto;
+  padding: 50px;
+  box-sizing: border-box;
+  top: 0;
+}
+
+section.skills {
+  & .title {
+    text-align: center;
+    font-size: 5vw;
+  }
+  & .des {
+    color: rgba(0, 0, 0, 0.555);
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+  }
+  & .des1 {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.601);
+    text-align: center;
+    max-width: 510px;
+    margin: auto;
+  }
+  & .list {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    justify-content: space-between;
+    gap: 3vw;
+    position: relative;
+    &::before {
+      position: absolute;
+
+      content: "";
+      width: 70%;
+      height: 70%;
+      box-shadow: 0 20px 40px #01082482;
+      background-image: linear-gradient(
+        -45deg,
+        rgba(28, 32, 255, 0.952),
+        #ff7e28
+      );
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      border-radius: 20px;
+      background-size: 170% auto;
+    }
+    & .item {
+      backdrop-filter: blur(50px);
+      padding: 20px;
+      border-radius: 20px;
+      background-color: #dadada5b;
+      & .tailwind{
+        font-size: 49px;
+        background-color: rgba(252, 252, 252, 0.836);
+        padding: 10px;
+        border-radius: 10px;
+      }
+      & skilll.progress_svg{
+        background-color: rgba(102, 0, 0, 0);
+      }
+      & .icon{
+        font-size: 30px;
+        background-color: rgba(252, 252, 252, 0.836);
+        padding: 10px;
+        border-radius: 10px;
+      }
+      & .des {
+        text-align: left;
+        width: 100%;
+        font-size: small;
+      }
+    }
+  }
+}
+
+section.projects {
+  & .title {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  & .des {
+    text-align: center;
+    max-width:500px;
+    margin: auto;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.601);
+  }
+  & .list {
+    margin-top: 10px;
+    width: 1150px;
+    margin: auto;
+
+    & .item {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 100px;
+      gap:10px;
+      & .images {
+        width: 500px;
+        background-image: linear-gradient(
+          -40deg,
+          rgba(28, 32, 255, 0.952),
+          #ff7e28
+        );
+        padding: 35px;
+        text-align: center;
+        border-radius: 20px;
+        overflow: hidden;
+
+        & img {
+          height: 250px;
+          width: 600px;
+          border-radius: 10px;
+          box-shadow: 0 20px 40px #010824;
+        }
+      }
+      & .content {
+        & h3 {
+          font-size: 2.1rem;
+          margin: 0;
+          margin-bottom: 10px;
+        }
+        & .des {
+          text-align: left;
+          width: 100%;
+        }
+        & .mission {
+          display: grid;
+          grid-template-columns: 70px 1fr;
+          align-items: center;
+          margin-bottom: 20px;
+
+          gap: 10px;
+          margin-top: 10px;
+          & div:nth-child(1) svg {
+            background-color: rgba(131, 131, 131, 0.185);
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 15px;
+          }
+          & h4 {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    & .item:nth-child(2n) {
+      & .images {
+        grid-column-start: 3;
+        grid-column-end: 2;
+      }
+      & .content {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+      }
+    }
+  }
+}
+
+/* animation */
+
+.animation {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.animation.active {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.model-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 20;
+}
+
+/* Add these CSS rules to your global styles */
+
+/* Navbar should stay on top */
+nav {
+  position: fixed;
+  z-index: 50;
+}
+
+/* Main content sections */
+section {
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+}
+
+/* For text content containers */
+.content-container {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+/* For the GoToTop button */
+.go-to-top {
+  z-index: 40;
+}
+
+
+.text-shadow {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.068);
+}
+
+.contact_us{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.425);
+  background: #ffffff00;
+  
+}
