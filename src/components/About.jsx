@@ -38,7 +38,7 @@ const About = () => {
 
           
 
-<div className="px-4 py-12 bg-background"  >
+<div className="px-4 py-8 bg-background"  >
       <div className="max-w-full mx-auto space-y-8">
         {/* Header */}
         <div className="space-y-2" >

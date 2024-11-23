@@ -9,7 +9,7 @@ const Work_experience = () => {
 
   return (
     <section className="work_section mx-auto mt-20 max-w-4xl  px-4 pt-20 work_exp"  ref={scrollTab}>
-      <h2 className="text-3xl font-bold items-center justify-center my-5 sm:my-7 mb-14 flex gap-2 sm:gap-3 sm:text-5xl" ref={(el) => el && divs.current.push(el)}>
+      <h2 className="text-3xl font-bold items-center justify-center my-5 sm:my-7 mb-10 flex gap-2 sm:gap-3 sm:text-5xl" ref={(el) => el && divs.current.push(el)}>
         My <span className="text-orange-500" >Work Experience</span>
       </h2>
       <div className="relative">
@@ -41,7 +41,7 @@ const Work_experience = () => {
               "Internship on Devops, where I gained hands-on experience in Devops, and all other Devops related applications.",
           },
         ].map((experience, index) => (
-          <div key={index} className="flex mb-5 sm:mb-12 items-center" ref={(el) => el && divs.current.push(el)}>
+          <div key={index} className="flex mb-2 sm:mb-12 items-center" ref={(el) => el && divs.current.push(el)}>
             <div className="work_left w-1/2 pr-8 text-right">
               <h3 className=" work_company font-bold text-2xl mr-5">{experience.company}</h3>
               <p className="work_period text-gray-500 text-sm mt-2 mr-5 font-semibold">

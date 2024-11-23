@@ -1,6 +1,5 @@
 import React from "react";
 import Skills from "./components/Skills";
-import Skills_with_loader from "./components/Skills";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -10,8 +9,6 @@ import Contact from "./components/Contact";
 import { ReactLenis } from "lenis/react";
 import Navbar from "./components/Navbar";
 import GoToTop from "./components/GoToTop";
-import ThreeDModel1 from "./components/ThreeDModel1";
-import Progress from "./components/Progress";
 function App() {
 
   return (
