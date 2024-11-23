@@ -14,6 +14,8 @@ import { SiTailwindcss } from "react-icons/si";
 import CustomHook from "./CustomHook";
 import "./progress.css";
 
+
+
 const Skills = () => {
   const divs = useRef([]);
   const scrollTab = useRef();
@@ -52,7 +54,7 @@ const Skills = () => {
       icon: faDatabase,
     },
     {
-      name: "Tailwind CSS",
+      name: "Tailwind",
       des: "I utilize Tailwind CSS for rapid styling and efficient, responsive design.",
       icon: "tailwind",
     },
@@ -68,12 +70,12 @@ const Skills = () => {
   return (
     <section className="skills -mt-5" ref={scrollTab}>
       <div
-        className="text-5xl font-bold items-center justify-center my-8 flex gap-3"
+        className=" text-3xl font-bold items-center justify-center my-5 sm:my-7 flex gap-2 sm:gap-3 sm:text-5xl "
         ref={(el) => el && divs.current.push(el)}
       >
         My <span className="text-orange-500">Skills</span>
       </div>
-      <div className="des1" ref={(el) => el && divs.current.push(el)}>
+      <div className=" des1" ref={(el) => el && divs.current.push(el)}>
         I specialize in full-stack development using the MERN stack, creating
         responsive user interfaces and efficient back-end systems. My expertise
         ensures seamless, scalable web applications from front to back.
@@ -93,7 +95,7 @@ const Skills = () => {
             )}
 
             {/* Skill Name */}
-            <h3 className="font-extrabold my-3 name_size">{skill.name}</h3>
+            <h3 className="skill_name font-extrabold my-3 name_size">{skill.name}</h3>
 
             {/* Skill Description */}
             <div className="des font-semibold">{skill.des}</div>

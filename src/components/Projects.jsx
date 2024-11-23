@@ -24,7 +24,7 @@ const Projects = () => {
         element,
         {
           // Starting state based on even/odd index
-          x: isOdd ? -100 : 100, // Right to left for odd, left to right for even
+          x: isOdd ? -100 : 0, // Right to left for odd, left to right for even
           opacity: 0,
           blur: "20px",
           filter: "blur(10px)",
@@ -38,8 +38,8 @@ const Projects = () => {
           ease: "power1.inOut",
           scrollTrigger: {
             trigger: element,
-            start: "bottom 140%",
-            end: "bottom 90%",
+            start: "bottom 120%",
+            end: "bottom 95%",
             scrub: true,
           },
         }
@@ -81,12 +81,12 @@ const Projects = () => {
   return (
     <section className="projects" ref={scrollTab}>
       <div
-        className="title text-5xl font-bold mb-8 flex justify-center gap-3"
+        className=" text-3xl md:text-5xl font-bold mb-8 flex justify-center gap-3"
         ref={(el) => el && divs.current.push(el)}
       >
         My<span className="text-orange-500">Projects</span>
       </div>
-      <div className="des " ref={(el) => el && divs.current.push(el)}>
+      <div className="des project_disc" ref={(el) => el && divs.current.push(el)}>
         {/* 20 */}
         These are some of my unique projects, creating responsive user
         interfaces and efficient back-end systems. My expertise ensures
@@ -96,13 +96,13 @@ const Projects = () => {
         {listProjects.map((value, key) => (
           <div className="item scroll-up" key={key}>
             <a href={value.link}>
-              <div className="images">
-                <img src={value.images} alt="3D Avatar" />
+              <div className="images ">
+                <img className="project_image" src={value.images}  alt="3D Avatar" />
               </div>
             </a>
             <div className="content">
               <h3 className="font-bold ">{value.name}</h3>
-              <div className="ml-3 my-5 text-gray-800 font-medium ">
+              <div className=" my-5 sm:my-5  text-gray-800 text-sm sm:text-base   font-medium  ">
                 {value.des}
               </div>
               <div className="mission">
@@ -122,10 +122,10 @@ const Projects = () => {
                 </div>
                 <div>
                   <h4>Languages</h4>
-                  <div className="text-gray-500 font-semibold text-sm">
+                  <div className="text-gray-500 font-semibold text-sm ">
                     {value.language}{" "}
                     <a href={value.link}>
-                      <button className=" ml-32 bg-gray-200 hover:bg-orange-500 text-white rounded-xl px-5 py-3 text-base ">
+                      <button className=" ml-52 bg-gray-200 hover:bg-orange-500 text-white rounded-xl px-3 py-2 sm:px-5 sm:py-3   text-base ">
                         <FontAwesomeIcon
                           style={{ color: "black" }}
                           icon={faLink}

@@ -23,8 +23,8 @@ useEffect(() => {
   }, []);
 
   return (
-    <button onClick={scrollToTop}>
-      <div className={`fixed bottom-12 right-9 text-3xl ${isScrolled ? "opacity-100 ":"opacity-0" }`}>
+    <button onClick={scrollToTop} className="go_to_top" >
+      <div className={`fixed z-50 bottom-12 right-9 text-3xl   ${isScrolled ? "opacity-100 ":"opacity-0" }`}>
         <FaCircleChevronUp className="opacity-80 text-orange-500 animate-bounce hover:opacity-100 transition-opacity" />
       </div>
     </button>

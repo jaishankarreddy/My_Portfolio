@@ -56,107 +56,104 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero relative z-10 mx-auto  max-w-6xl px-5 py-20 flex flex-col lg:flex-row gap-4 items-center min-h-svh mt-12 -mb-10">
-      {/* <section className="hero mx-auto max-w-6xl px-5 py-20 flex flex-col lg:flex-row gap-4 items-center mt-36"> */}
-      {/* Right Section with Animated Text */}
+    <section className="hero relative z-10 mx-auto max-w-6xl px-5 py-10 md:py-20 flex flex-col-reverse md:flex-row gap-8 items-center min-h-svh mt-12 -mb-10 m-full">
+      {/* Content Section */}
       {isAnimating && (
         <motion.div
           key="right-section"
-          className="right flex-2 pl-5 space-y-5"
+          className="right w-full md:w-1/2 space-y-4 text-center md:text-left"
           variants={containerVariants}
           initial="initial"
           animate="animate"
         >
           <motion.h2
-            className="text-2xl font-semibold"
+            className="hi_there text-xl md:text-2xl font-semibold"
             variants={springAnimation}
           >
-            Hi Their,
+            Hi There,
           </motion.h2>
           <motion.h1
-            className="text-5xl font-bold py-2 text-orange-500 text-shadow"
+            className="name text-4xl md:text-5xl font-bold py-2 text-orange-500 text-shadow"
             variants={springAnimation}
           >
-            <span className="text-black">I’m </span>
-            <p className="ml-20 mt-1">Jaishankar Reddy</p>
+            <span className="i_am text-black">I'm</span>
+            <p className="my_name md:ml-20 mt-1">Jaishankar Reddy</p>
           </motion.h1>
           <motion.h1
-            className="text-3xl font-bold pb-2"
+            className="full_stack text-2xl md:text-3xl font-bold pb-2"
             variants={springAnimation}
           >
-            <div className="flex text-2xl font-bold ">
-              {" "}
-              <span className="mr-2 text-gray-00 ">I am a </span>
-              <p className="text-orange-600 "> Full-Stack Developer</p>
+            <div className="flex flex-col md:flex-row items-center justify-center md:justify-start text-xl md:text-2xl font-bold">
+              <span className="i_am_a mr-2 text-gray-800">I am a</span>
+              <p className="full_stack text-orange-600">Full-Stack Developer</p>
             </div>
           </motion.h1>
           <motion.p
-            className="text-gray-600 max-w-xl text-base font-medium pb-2"
+            className="hero_disc text-gray-700 max-w-xl text-sm font-medium md:text-base pb-2 mx-auto md:mx-0"
             variants={springAnimation}
           >
-            I’m a Full Stack Web Developer specializing in the MERN stack, with
+          Full Stack Web Developer specializing in the MERN stack, with
             expertise in creating responsive, scalable applications. I focus on
             both front-end and back-end development, prioritizing user
             experience and efficiency.
           </motion.p>
           <motion.a href="resume.pdf" variants={springAnimation}>
-            <motion.button className="bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-6 py-2 text-base my-5">
+            <motion.button className="home_button bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-6 py-2 text-base my-5">
               Download CV
             </motion.button>
           </motion.a>
         </motion.div>
       )}
 
-      {/* Left Section with Profile Image and Icons */}
+      {/* Image Section */}
       {isAnimating && (
         <motion.div
           key="left-section"
-          className="left flex-1 pl-44 flex flex-col items-center"
+          className="left w-full md:w-1/2 flex flex-col items-center md:pl-10 lg:pl-44"
           variants={containerVariants}
           initial="initial"
           animate="animate"
         >
-          
-            <motion.div
-              variants={imageAnimation}
-              className="relative w-72 h-72 rounded-full border-8 border-white overflow-hidden shadow-lg"
-            >
-              <img
-                src={"images/myImg.jpg"}
-                alt="Profile"
-                className="object-cover w-full h-full z-20 "
-              />
-            </motion.div>
-        
+          <motion.div
+            variants={imageAnimation}
+            className="home_img relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full border-8 border-white overflow-hidden shadow-lg"
+          >
+            
+            <img
+              src={"images/myImg.jpg"}
+              alt="Profile"
+              className="object-cover w-full h-full z-20"
+            />
+          </motion.div>
 
-          <motion.div className="flex space-x-4 mt-10 ">
+          <motion.div className="social_media_container flex space-x-6 mt-6 md:mt-10">
             <motion.a
               variants={iconAnimation}
               href="#"
-              className="hover:text-orange-500 "
+              className="hover:text-orange-500"
             >
-              <FaFacebook className="h-5 w-5" />
+              <FaFacebook className="social_media h-6 w-6 md:h-5 md:w-5" />
             </motion.a>
             <motion.a
               variants={iconAnimation}
               href="#"
               className="hover:text-orange-500"
             >
-              <FaTwitter className="h-5 w-5" />
+              <FaTwitter className="social_media h-6 w-6 md:h-5 md:w-5" />
             </motion.a>
             <motion.a
               variants={iconAnimation}
               href="#"
               className="hover:text-orange-500"
             >
-              <Instagram className="h-5 w-5" />
+              <Instagram className="social_media h-6 w-6 md:h-5 md:w-5" />
             </motion.a>
             <motion.a
               variants={iconAnimation}
               href="https://www.linkedin.com/in/jai-shankar-9a65ab314"
               className="hover:text-orange-500"
             >
-              <FaLinkedin className="h-5 w-5" />
+              <FaLinkedin className="social_media h-6 w-6 md:h-5 md:w-5" />
             </motion.a>
           </motion.div>
         </motion.div>

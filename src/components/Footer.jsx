@@ -16,7 +16,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-100 py-10 -mb-5">
+    <footer className=" footer bg-gray-100 py-10 -mb-5">
       <div className="mx-auto max-w-3xl px-4">
         <div className="text-center mb-8">
         <div className="flex items-center justify-center mb-5 space-x-1 text-white ">
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
 
           
-          <div className="flex justify-center gap-6 mb-6 text-sm">
+          <div className=" footer_nav flex justify-center gap-6 mb-6 text-sm">
           {footerItems.filter(item => !item.rightSide).map(item => (
              <button 
              key={item.id}
@@ -38,12 +38,10 @@ const Footer = () => {
              {item.label}
            </button>
           ))}
-             
-
-
-         
           </div>
-          <div className="flex justify-center gap-4 mb-6">
+
+
+          <div className=" flex justify-center gap-4 mb-6">
             <button href="#" className="text-gray-600 hover:text-orange-500">
               <Facebook className="h-5 w-5" />
             </button>
